@@ -1,0 +1,328 @@
+/* ===================== Media Queries for Omnifood Website ===================== */
+
+/* ---------- Tablets: 768px–1024px ---------- */
+@media (max-width: 1024px) {
+	html {
+	  font-size: 19px;
+	}
+  
+	.mainNav {
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  display: flex;
+	}
+  
+	.heroTextBox h1 {
+	  font-size: 180%;
+	}
+  
+	.box,
+	.stepBox,
+	.planBox,
+	.contactForm {
+	  width: 100%;
+	  margin: 20px 0;
+	}
+  
+	.phoneScreen {
+	  width: 60%;
+	}
+  
+	.mealshowcase li {
+	  width: 50%;
+	}
+  
+	.cities .box {
+	  width: 48%;
+	  margin-bottom: 30px;
+	}
+  
+	.cities .box img {
+	  width: 100%;
+	  height: auto;
+	  object-fit: cover;
+	}
+  
+	.sectionPlans .planBox {
+	  width: 90%;
+	  margin: 20px auto;
+	}
+  
+	.formGroup {
+	  flex-direction: row;
+	  align-items: center;
+	}
+  
+	.formGroup label {
+	  flex: 0 0 120px;
+	  margin-bottom: 0;
+	}
+  
+	.formGroup input,
+	.formGroup select,
+	.formGroup textarea {
+	  flex: 1;
+	}
+  }
+  
+  /* ---------- Smartphones: 480px–768px ---------- */
+  @media (max-width: 769px) {
+	html {
+	  font-size: 17px;
+	}
+  
+	.mainNav {
+	  /* flex-direction: column; */
+	  align-items: center;
+	}
+  
+	.heroTextBox {
+	  padding: 0 20px;
+	}
+  
+	.heroTextBox h1 {
+	  font-size: 150%;
+	}
+  
+	.btn {
+	  padding: 10px 20px;
+	  font-size: 90%;
+	}
+  
+	.mealshowcase li {
+	  width: 100%;
+	}
+  
+	.stepBox {
+	  text-align: center;
+	  padding: 0;
+	}
+  
+	.workSteps {
+	  text-align: left;
+	  padding: 0 10px;
+	  font-size: 80%;
+	}
+  
+	.phoneScreen {
+	  width: 80%;
+	}
+  
+	.planBox {
+	  width: 95%;
+	  margin: 0 auto 30px;
+	}
+  
+	.contactForm {
+	  width: 95%;
+	  padding: 15px;
+	}
+  
+	.formGroup {
+	  flex-direction: column;
+	  align-items: stretch;
+	}
+  
+	.formGroup label {
+	  margin-bottom: 5px;
+	}
+  
+	.cities .box {
+	  width: 100%;
+	  margin-bottom: 30px;
+	  text-align: center;
+	}
+  
+	.cities .box img {
+	  width: 90%;
+	  height: auto;
+	  border-radius: 10px;
+	  display: block;
+	  margin: 0 auto;
+	}
+  
+	.sectionPlans .planBox {
+	  width: 95%;
+	  margin: 20px auto;
+	}
+  
+	.planBox div {
+	  padding: 10px;
+	}
+  
+	.footerNav,
+	.socialLinks {
+	  float: none;
+	  text-align: center;
+	  margin-bottom: 20px;
+	}
+  }
+  
+  /* ---------- Very Small Devices: less than 480px ---------- */
+  @media (max-width: 480px) {
+	html {
+	  font-size: 15px;
+	}
+  
+	.logo {
+	  height: 70px;
+	}
+  
+	.mainNav {
+		flex-direction: column;
+		align-items: center;
+	  }
+	
+	  .mainNav li {
+		display: block;  /* instead of none */
+		margin: 5px 0;
+	}
+	  
+  
+	.heroTextBox h1 {
+	  font-size: 130%;
+	  word-spacing: 1px;
+	  letter-spacing: 1px;
+	}
+  
+	h2 {
+	  font-size: 150%;
+	}
+  
+	.btnApp img {
+	  height: 40px;
+	}
+  
+	.planPrice {
+	  font-size: 200%;
+	}
+  
+	.logoSmall {
+	  font-size: 120%;
+	}
+  
+	blockquote {
+	  font-size: 90%;
+	}
+  
+	cite img {
+	  height: 35px;
+	}
+  
+	.col {
+	  width: 100% !important;
+	  float: none;
+	}
+  
+	.cities .box,
+	.planBox {
+	  /* text-align: center; */
+	  margin: 0;
+	  padding: 0;
+	  margin-top: 5%;
+	}
+  
+	.cities .box img {
+	  width: 100%;
+	  height: auto;
+	  object-fit: cover;
+	  border-radius: 8px;
+	}
+  
+	.contactForm {
+	  width: 98%;
+	  padding: 10px;
+	}
+  
+	.formGroup {
+	  flex-direction: column;
+	  align-items: stretch;
+	}
+  
+	.formGroup label {
+	  margin-bottom: 5px;
+	}
+  }
+
+  /* ---------- Large Screens: 1441px and above (2K, 4K, TVs) ---------- */
+@media (min-width: 1441px) {
+	html {
+	  font-size: 24px;
+	}
+  
+	.row {
+	  max-width: 1440px;
+	  margin: 0 auto;
+	  padding: 0 30px;
+	}
+  
+	.heroTextBox {
+	  max-width: 1200px;
+	  margin: 0 auto;
+	  padding: 40px;
+	}
+  
+	.planBox,
+	.contactForm,
+	.sectionPlans .planBox,
+	.stepBox,
+	.cities .box {
+	  max-width: 90%;
+	  margin: 0 auto;
+	}
+  
+	.planPrice {
+	  font-size: 220%;
+	}
+  
+	.heroTextBox h1 {
+	  font-size: 220%;
+	}
+  
+	.contactForm {
+	  padding: 40px;
+	}
+  
+	.footerNav,
+	.socialLinks {
+	  font-size: 110%;
+	}
+
+	.formGroup {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 10px;
+	  }
+	
+	  .formGroup label {
+		width: 40%;
+	  }
+	
+	  .formGroup input,
+	  .formGroup select,
+	  .formGroup textarea {
+		width: 60%;
+	  }
+  }
+  
+
+  @media (min-width: 1920px) {
+	html {
+	  font-size: 24px;
+	}
+  
+	.heroTextBox h1 {
+	  font-size: 280%;
+	}
+  
+	.planBox, .contactForm {
+	  max-width: 900px;
+	  margin: 30px auto;
+	}
+  
+	.mealPhoto img {
+	  transform: scale(1.2);
+	}
+  }
+  
