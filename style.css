@@ -424,6 +424,10 @@ blockquote::before{
     border-radius: 5px;
 }
 
+.sectionForm{
+    background-color: #f1eeee;
+}
+
 .contactForm{
     width: 60%;
     margin: 0 auto;
