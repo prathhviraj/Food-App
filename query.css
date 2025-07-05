@@ -1,328 +1,486 @@
-/* ===================== Media Queries for Omnifood Website ===================== */
+/* ===================== Responsive Design for Omnifood Website ===================== */
 
-/* ---------- Tablets: 768px–1024px ---------- */
-@media (max-width: 1024px) {
-	html {
-	  font-size: 19px;
-	}
-  
-	.mainNav {
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  display: flex;
-	}
-  
-	.heroTextBox h1 {
-	  font-size: 180%;
-	}
-  
-	.box,
-	.stepBox,
-	.planBox,
-	.contactForm {
-	  width: 100%;
-	  margin: 20px 0;
-	}
-  
-	.phoneScreen {
-	  width: 60%;
-	}
-  
-	.mealshowcase li {
-	  width: 50%;
-	}
-  
-	.cities .box {
-	  width: 48%;
-	  margin-bottom: 30px;
-	}
-  
-	.cities .box img {
-	  width: 100%;
-	  height: auto;
-	  object-fit: cover;
-	}
-  
-	.sectionPlans .planBox {
-	  width: 90%;
-	  margin: 20px auto;
-	}
-  
-	.formGroup {
-	  flex-direction: row;
-	  align-items: center;
-	}
-  
-	.formGroup label {
-	  flex: 0 0 120px;
-	  margin-bottom: 0;
-	}
-  
-	.formGroup input,
-	.formGroup select,
-	.formGroup textarea {
-	  flex: 1;
-	}
-  }
-  
-  /* ---------- Smartphones: 480px–768px ---------- */
-  @media (max-width: 769px) {
-	html {
-	  font-size: 17px;
-	}
-  
-	.mainNav {
-	  /* flex-direction: column; */
-	  align-items: center;
-	}
-  
-	.heroTextBox {
-	  padding: 0 20px;
-	}
-  
-	.heroTextBox h1 {
-	  font-size: 150%;
-	}
-  
-	.btn {
-	  padding: 10px 20px;
-	  font-size: 90%;
-	}
-  
-	.mealshowcase li {
-	  width: 100%;
-	}
-  
-	.stepBox {
-	  text-align: center;
-	  padding: 0;
-	}
-  
-	.workSteps {
-	  text-align: left;
-	  padding: 0 10px;
-	  font-size: 80%;
-	}
-  
-	.phoneScreen {
-	  width: 80%;
-	}
-  
-	.planBox {
-	  width: 95%;
-	  margin: 0 auto 30px;
-	}
-  
-	.contactForm {
-	  width: 95%;
-	  padding: 15px;
-	}
-  
-	.formGroup {
-	  flex-direction: column;
-	  align-items: stretch;
-	}
-  
-	.formGroup label {
-	  margin-bottom: 5px;
-	}
-  
-	.cities .box {
-	  width: 100%;
-	  margin-bottom: 30px;
-	  text-align: center;
-	}
-  
-	.cities .box img {
-	  width: 90%;
-	  height: auto;
-	  border-radius: 10px;
-	  display: block;
-	  margin: 0 auto;
-	}
-  
-	.sectionPlans .planBox {
-	  width: 95%;
-	  margin: 20px auto;
-	}
-  
-	.planBox div {
-	  padding: 10px;
-	}
-  
-	.footerNav,
-	.socialLinks {
-	  float: none;
-	  text-align: center;
-	  margin-bottom: 20px;
-	}
-  }
-  
-  /* ---------- Very Small Devices: less than 480px ---------- */
-  @media (max-width: 480px) {
-	html {
-	  font-size: 15px;
-	}
-  
-	.logo {
-	  height: 70px;
-	}
-  
-	.mainNav {
-		flex-direction: column;
-		align-items: center;
-	  }
-	
-	  .mainNav li {
-		display: block;  /* instead of none */
-		margin: 5px 0;
-	}
-	  
-  
-	.heroTextBox h1 {
-	  font-size: 130%;
-	  word-spacing: 1px;
-	  letter-spacing: 1px;
-	}
-  
-	h2 {
-	  font-size: 150%;
-	}
-  
-	.btnApp img {
-	  height: 40px;
-	}
-  
-	.planPrice {
-	  font-size: 200%;
-	}
-  
-	.logoSmall {
-	  font-size: 120%;
-	}
-  
-	blockquote {
-	  font-size: 90%;
-	}
-  
-	cite img {
-	  height: 35px;
-	}
-  
-	.col {
-	  width: 100% !important;
-	  float: none;
-	}
-  
-	.cities .box,
-	.planBox {
-	  /* text-align: center; */
-	  margin: 0;
-	  padding: 0;
-	  margin-top: 5%;
-	}
-  
-	.cities .box img {
-	  width: 100%;
-	  height: auto;
-	  object-fit: cover;
-	  border-radius: 8px;
-	}
-  
-	.contactForm {
-	  width: 98%;
-	  padding: 10px;
-	}
-  
-	.formGroup {
-	  flex-direction: column;
-	  align-items: stretch;
-	}
-  
-	.formGroup label {
-	  margin-bottom: 5px;
-	}
-  }
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 
-  /* ---------- Large Screens: 1441px and above (2K, 4K, TVs) ---------- */
+.mobile-nav-toggle:hover {
+  color: orange;
+  transform: scale(1.1);
+}
+
+/* Navigation container improvements */
+nav > div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container for better mobile layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Large Screens: 1200px and above ---------- */
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .mainNav li {
+    margin-left: 40px;
+  }
+  
+  .contactForm {
+    width: 60%;
+  }
+  
+  .phoneScreen {
+    width: 37%;
+  }
+}
+
+/* ---------- Medium Desktops: 992px to 1199px ---------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 17px;
+  }
+  
+  .mainNav li {
+    margin-left: 30px;
+  }
+  
+  .mealshowcase li {
+    width: 25%;
+  }
+  
+  .stepBox {
+    width: 48%;
+  }
+  
+  .contactForm {
+    width: 70%;
+  }
+  
+  .phoneScreen {
+    width: 45%;
+  }
+}
+
+/* ---------- Tablets: 768px to 991px ---------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .mainNav li {
+    margin-left: 20px;
+  }
+  
+  .mealshowcase li {
+    width: 33.33%;
+  }
+  
+  .stepBox,
+  .planBox {
+    width: 48%;
+    margin: 1%;
+  }
+  
+  .phoneScreen {
+    width: 60%;
+  }
+  
+  .contactForm {
+    width: 80%;
+  }
+  
+  .cities .box {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+}
+
+/* ---------- Mobile Landscape: 481px to 767px ---------- */
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+  
+  /* Show mobile nav toggle */
+  .mobile-nav-toggle {
+    display: block;
+  }
+  
+  /* Hide desktop nav */
+  .mainNav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .mainNav.active {
+    display: flex;
+  }
+  
+  .mainNav li {
+    margin: 15px 0;
+  }
+  
+  .mainNav li a {
+    font-size: 120%;
+    padding: 15px 0;
+  }
+  
+  .heroTextBox {
+    padding: 0 20px;
+  }
+  
+  .heroTextBox h1 {
+    font-size: 150%;
+  }
+  
+  .mealshowcase li {
+    width: 50%;
+  }
+  
+  .stepBox,
+  .planBox,
+  .box {
+    width: 100% !important;
+    margin: 10px 0;
+  }
+  
+  .contactForm {
+    width: 90%;
+  }
+  
+  .phoneScreen {
+    width: 100%;
+  }
+  
+  .cities .box {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .cities .box img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- Mobile Portrait: up to 480px ---------- */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  /* Show mobile nav toggle */
+  .mobile-nav-toggle {
+    display: block;
+  }
+  
+  /* Hide desktop nav */
+  .mainNav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .mainNav.active {
+    display: flex;
+  }
+  
+  .mainNav li {
+    margin: 20px 0;
+  }
+  
+  .mainNav li a {
+    font-size: 140%;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    height: 70px;
+    float: none;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .heroTextBox {
+    padding: 0 15px;
+  }
+  
+  .heroTextBox h1 {
+    font-size: 130%;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    font-size: 150%;
+  }
+  
+  .mealshowcase li {
+    width: 100%;
+  }
+  
+  .stepBox,
+  .planBox,
+  .box,
+  .contactForm,
+  .phoneScreen {
+    width: 100% !important;
+    margin: 10px 0;
+  }
+  
+  .workSteps {
+    text-align: left;
+    padding: 0 10px;
+    font-size: 80%;
+  }
+  
+  .phoneScreen {
+    width: 100%;
+  }
+  
+  .planBox {
+    width: 95%;
+    margin: 0 auto 30px;
+  }
+  
+  .contactForm {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .cities .box {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .cities .box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .btnApp img {
+    height: 40px;
+  }
+  
+  .planPrice {
+    font-size: 200%;
+  }
+  
+  .logoSmall {
+    font-size: 120%;
+  }
+  
+  blockquote {
+    font-size: 90%;
+  }
+  
+  cite img {
+    height: 35px;
+  }
+  
+  .col {
+    width: 100% !important;
+    float: none;
+  }
+  
+  .footerNav,
+  .socialLinks {
+    float: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Fix form layout */
+  .formGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .formGroup label {
+    margin-bottom: 5px;
+  }
+}
+
+/* ---------- Extra Large Screens: 1441px and above ---------- */
 @media (min-width: 1441px) {
-	html {
-	  font-size: 24px;
-	}
-  
-	.row {
-	  max-width: 1440px;
-	  margin: 0 auto;
-	  padding: 0 30px;
-	}
-  
-	.heroTextBox {
-	  max-width: 1200px;
-	  margin: 0 auto;
-	  padding: 40px;
-	}
-  
-	.planBox,
-	.contactForm,
-	.sectionPlans .planBox,
-	.stepBox,
-	.cities .box {
-	  max-width: 90%;
-	  margin: 0 auto;
-	}
-  
-	.planPrice {
-	  font-size: 220%;
-	}
-  
-	.heroTextBox h1 {
-	  font-size: 220%;
-	}
-  
-	.contactForm {
-	  padding: 40px;
-	}
-  
-	.footerNav,
-	.socialLinks {
-	  font-size: 110%;
-	}
-
-	.formGroup {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		gap: 10px;
-	  }
-	
-	  .formGroup label {
-		width: 40%;
-	  }
-	
-	  .formGroup input,
-	  .formGroup select,
-	  .formGroup textarea {
-		width: 60%;
-	  }
+  html {
+    font-size: 24px;
   }
   
-
-  @media (min-width: 1920px) {
-	html {
-	  font-size: 24px;
-	}
-  
-	.heroTextBox h1 {
-	  font-size: 280%;
-	}
-  
-	.planBox, .contactForm {
-	  max-width: 900px;
-	  margin: 30px auto;
-	}
-  
-	.mealPhoto img {
-	  transform: scale(1.2);
-	}
+  .row {
+    max-width: 1400px;
+    margin: 0 auto;
   }
+  
+  .heroTextBox {
+    max-width: 1400px;
+  }
+  
+  .planBox,
+  .contactForm {
+    max-width: 500px;
+  }
+  
+  .planPrice {
+    font-size: 250%;
+  }
+  
+  .heroTextBox h1 {
+    font-size: 280%;
+  }
+  
+  .contactForm {
+    width: 50%;
+  }
+  
+  .footerNav,
+  .socialLinks {
+    font-size: 120%;
+  }
+  
+  .formGroup {
+    margin-bottom: 30px;
+  }
+  
+  .formGroup label {
+    font-size: 110%;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    font-size: 110%;
+  }
+}
+
+/* ---------- Ultra Large Screens: 1920px and above ---------- */
+@media (min-width: 1920px) {
+  html {
+    font-size: 28px;
+  }
+  
+  .heroTextBox h1 {
+    font-size: 320%;
+  }
+  
+  .planBox, 
+  .contactForm {
+    max-width: 600px;
+  }
+  
+  .mealPhoto img {
+    max-height: 400px;
+  }
+}
+
+/* ---------- General Responsive Improvements ---------- */
+@media (max-width: 767px) {
+  /* Ensure proper container padding */
+  .row {
+    padding: 0 15px;
+  }
+  
+  /* Fix image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Improve button spacing */
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Better form layout */
+  .contactForm .row {
+    margin-bottom: 15px;
+  }
+  
+  .contactForm .col {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Fix testimonial layout */
+  .sectionTestimonials .col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  /* Fix section padding and margins */
+  section {
+    padding: 40px 0;
+  }
+  
+  /* Ensure content doesn't stick to edges */
+  .longRow {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  /* Better spacing for all sections */
+  .box, .stepBox, .planBox {
+    margin: 10px 5px;
+    padding: 15px;
+  }
+  
+  /* Fix hero text positioning */
+  .heroTextBox {
+    width: 90%;
+    max-width: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
   

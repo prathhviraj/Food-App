@@ -22,6 +22,9 @@
     <nav>
       <div>
         <img class="logo" src="img1/logo.png" alt="Omnifood logo">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
         <ul class="mainNav">
           <li><a href="#services">Food delivery</a></li>
           <li><a href="#how-it-works">How it works</a></li>
@@ -305,8 +308,8 @@
 
   <script>
     $(document).ready(function(){
+      // Smooth scrolling for navigation links
       $("a").on('click', function(event) {
-    
         if (this.hash !== "") {
           event.preventDefault();
           var hash = this.hash;
@@ -314,11 +317,30 @@
           $('html, body').animate({
             scrollTop: $(hash).offset().top
           }, 800, function(){
-
             window.location.hash = hash;
           });
         } 
-      })
+      });
+      
+      // Mobile navigation toggle
+      $('.mobile-nav-toggle').on('click', function() {
+        $('.mainNav').toggleClass('active');
+        $(this).find('ion-icon').toggleClass('menu-outline close-outline');
+      });
+      
+      // Close mobile nav when clicking on a link
+      $('.mainNav a').on('click', function() {
+        $('.mainNav').removeClass('active');
+        $('.mobile-nav-toggle ion-icon').removeClass('close-outline').addClass('menu-outline');
+      });
+      
+      // Close mobile nav when clicking outside
+      $(document).on('click', function(event) {
+        if (!$(event.target).closest('nav').length) {
+          $('.mainNav').removeClass('active');
+          $('.mobile-nav-toggle ion-icon').removeClass('close-outline').addClass('menu-outline');
+        }
+      });
     });
     </script>
 
