@@ -322,22 +322,7 @@
         } 
       });
     
-      $('.mobile-nav-toggle').on('click', function() {
-        $('.mainNav').toggleClass('active');
-        $(this).find('ion-icon').toggleClass('menu-outline close-outline');
-      });
       
-      $('.mainNav a').on('click', function() {
-        $('.mainNav').removeClass('active');
-        $('.mobile-nav-toggle ion-icon').removeClass('close-outline').addClass('menu-outline');
-      });
-      
-      $(document).on('click', function(event) {
-        if (!$(event.target).closest('nav').length) {
-          $('.mainNav').removeClass('active');
-          $('.mobile-nav-toggle ion-icon').removeClass('close-outline').addClass('menu-outline');
-        }
-      });
     });
     </script>
 
